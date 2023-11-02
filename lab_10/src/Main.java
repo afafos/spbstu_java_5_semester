@@ -6,7 +6,7 @@ public class Main {
             System.out.println("Max: " + triple1.max());
             System.out.println("Mean: " + triple1.mean());
 
-            Triple<String> triple2 = new Triple<>("apple", "banana", "cherry");
+            Triple<String> triple2 = new Triple<>("a", "b", "c");
             System.out.println("Min: " + triple2.min());
             System.out.println("Max: " + triple2.max());
             System.out.println("Mean: " + triple2.mean());
