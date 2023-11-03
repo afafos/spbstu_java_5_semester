@@ -22,10 +22,16 @@ public class Triple<T extends Comparable<T>> {
     }
 
     public T min() {
+        if (!(first instanceof Comparable) || !(second instanceof Comparable) || !(third instanceof Comparable)) {
+            throw new UnsupportedOperationException("Types are not comparable.");
+        }
         return min(first, min(second, third));
     }
 
     public T max() {
+        if (!(first instanceof Comparable) || !(second instanceof Comparable) || !(third instanceof Comparable)) {
+            throw new UnsupportedOperationException("Types are not comparable.");
+        }
         return max(first, max(second, third));
     }
 
