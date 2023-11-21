@@ -1,26 +1,20 @@
-public class Stack {
-    private int maxSize;
-    private int top;
-    private int[] stackArray;
+import java.util.ArrayList;
 
-    public Stack(int size) {
-        maxSize = size;
-        stackArray = new int[maxSize];
-        top = -1;
+public class Stack {
+    private ArrayList<Integer> stackArray;
+
+    public Stack() {
+        stackArray = new ArrayList<>();
     }
 
     public void push(int value) {
-        if (top < maxSize - 1) {
-            stackArray[++top] = value;
-            System.out.println("Добавлен элемент: " + value);
-        } else {
-            System.out.println("Стек полон. Невозможно добавить элемент " + value);
-        }
+        stackArray.add(value);
+        System.out.println("Добавлен элемент: " + value);
     }
 
-    public int pop() {
-        if (top >= 0) {
-            int poppedValue = stackArray[top--];
+    public int pop() {ad
+        if (!isEmpty()) {
+            int poppedValue = stackArray.remove(stackArray.size() - 1);
             System.out.println("Извлечен элемент: " + poppedValue);
             return poppedValue;
         } else {
@@ -30,8 +24,8 @@ public class Stack {
     }
 
     public int peek() {
-        if (top >= 0) {
-            return stackArray[top];
+        if (!isEmpty()) {
+            return stackArray.get(stackArray.size() - 1);
         } else {
             System.out.println("Стек пуст. Нет верхнего элемента.");
             return -1;
@@ -39,15 +33,11 @@ public class Stack {
     }
 
     public boolean isEmpty() {
-        return top == -1;
-    }
-
-    public boolean isFull() {
-        return top == maxSize - 1;
+        return stackArray.isEmpty();
     }
 
     public static void main(String[] args) {
-        Stack stack = new Stack(5);
+        Stack stack = new Stack();
 
         stack.push(1);
         stack.push(2);
