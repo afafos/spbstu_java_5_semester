@@ -1,6 +1,6 @@
 # Huffman Coding
 
-Huffman Coding is a Java implementation of the Huffman coding algorithm, a widely used compression technique. 
+Huffman Coding is a Java implementation of the Huffman coding algorithm. 
 This program allows you to encode and decode text files using Huffman coding, providing information about compression ratios.
 
 ## Usage
