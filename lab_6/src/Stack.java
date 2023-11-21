@@ -12,7 +12,7 @@ public class Stack {
         System.out.println("Добавлен элемент: " + value);
     }
 
-    public int pop() {ad
+    public int pop() {
         if (!isEmpty()) {
             int poppedValue = stackArray.remove(stackArray.size() - 1);
             System.out.println("Извлечен элемент: " + poppedValue);
