@@ -31,3 +31,7 @@ After running the program, you'll get information about the compression process,
 - `HuffmanCoding.java`: Main class containing the Huffman coding implementation.
 - `HuffmanNode.java`: Class defining the structure of a Huffman tree node.
 
+## Example
+
+![](./practical_work_Huffman/src/example.jpg)
+
