@@ -33,5 +33,5 @@ After running the program, you'll get information about the compression process,
 
 ## Example
 
-![](./practical_work_Huffman/src/example.png)
+![](./practical_work_Huffman/example.png)
 
