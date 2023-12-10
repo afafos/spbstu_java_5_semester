@@ -3,7 +3,6 @@ import java.util.PriorityQueue;
 import java.util.HashMap;
 
 public class HuffmanCoding {
-
     private static HashMap<Character, String> huffmanCodes = new HashMap<>();
 
     public static void main(String[] args) {
@@ -13,11 +12,11 @@ public class HuffmanCoding {
 
         int originalSize = encode(inputFile, encodedFile);
         int decodedSize = decode(encodedFile, decodedFile);
+        int encodedSize = encodedFile.length() * 8;
 
-        double compressionRatio = (double) decodedSize / originalSize;
+        double compressionRatio = (double) encodedSize / originalSize;
         System.out.println("Original Size: " + originalSize + " bits");
-        System.out.println("Encoded Size: " + encodedFile.length() * 8 + " bits");
-        System.out.println("Decoded Size: " + decodedSize + " bits");
+        System.out.println("Encoded Size: " + encodedSize + " bits");
         System.out.println("Compression Ratio: " + compressionRatio);
     }
 
