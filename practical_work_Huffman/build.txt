@@ -8,7 +8,8 @@
 - Перейдите в каталог, в который вы хотите склонировать репозиторий
 - Клонируйте репозиторий с помощью команды Git:
   git clone https://github.com/afafos/spbstu_java_5_semester.git
-- Выполните следующие команды для компиляции кода:
-  javac HuffmanNode.java
-  javac HuffmanCoding.java
+- Перейдите в папку с проектом кодирования методом Хаффмана
+  cd ./practical_work_Huffman/src
+- Выполните следующую команду для компиляции кода:
+  javac Main.java
 
