@@ -3,35 +3,35 @@
 Huffman Coding is a Java implementation of the Huffman coding algorithm. 
 This program allows you to encode and decode text files using Huffman coding, providing information about compression ratios.
 
+## Overview
+
+- `CompressionInfo.java`: Defines a class to store information about compressed data, including the compressed data itself, original file name, recovery map, original length, and data offset.
+
+- `DataIOManager.java`: Manages input and output operations, including reading and writing archive files, reading normal files, and testing compression results.
+
+- `Huffman.java`: Implements the Huffman compression algorithm. It includes methods for encoding and decoding data, building Huffman trees, and managing code mappings.
+
+- `Leaf.java`: Represents a leaf node in the Huffman tree, containing a symbol and its corresponding prefix code.
+
+- `Main.java`: Contains the main application logic for encoding, decoding, and providing information about archive files.
+
+- `Node.java`: Represents a node in the Huffman tree, with frequency information and references to left and right child nodes.
+
 ## Usage
 
-1. **Input File**: Place the text you want to compress in the `input_output_files/input.txt` file.
-2. **Build and Run**: Follow the instructions in `src/build.txt`,`src/user-guide.txt`to build and run the program.
-3. **Output Files**:
-   - Encoded binary data will be saved in `input_output_files/encoded.bin`.
-   - Decoded text will be saved in `input_output_files/decoded.txt`.
+To use the Huffman compression algorithm, you can run the Main class with the following commands:
+
+1. **To encode a file**: ```java Main encode <file_path>```
+2. **To decode an archive**: ```java Main decode <archive_path>```
+3. **To get information about an archive**: ```java Main inform <archive_path>```
 
 ## Results
 
-After running the program, you'll get information about the compression process, including:
-- Original Size: Size of the original text file in bits.
-- Encoded Size: Size of the encoded binary file in bits.
-- Decoded Size: Size of the decoded text file in bits.
-- Compression Ratio: Ratio of compressed size to the original size.
+The Huffman compression algorithm has been implemented successfully, providing compression and decompression of data. 
 
-## Implementation Details
+- **Compression Ratio**: The compression ratio is calculated as the percentage of the original file length to the compressed file length. The ratio is printed during the testing phase.
 
-- The Huffman coding algorithm builds a Huffman tree based on character frequencies in the input text.
-- The tree is then used to generate Huffman codes for each character.
-- The original text is encoded using these Huffman codes and saved as a binary file.
-- Decoding involves reading the binary file, reconstructing the Huffman tree, and decoding the encoded text.
+- **Code Map**: The code map represents the mapping of symbols to their Huffman codes. This information is displayed during the testing phase.
 
-## Files
-
-- `HuffmanCoding.java`: Main class containing the Huffman coding implementation.
-- `HuffmanNode.java`: Class defining the structure of a Huffman tree node.
-
-## Example
-
-![](example.png)
+- **Archive Information**: The inform command provides detailed information about the compressed archive, including original file name, length, and code mappings.
 
